@@ -13,7 +13,7 @@ const Crew = () => {
   const [crewImg, setCrewImg] = useState(Anousheh);
 
   return (
-    <div className="pageContainer relative bg-cover lg:bg-[url('./assets/crew/background-crew-desktop.jpg')]">
+    <div className="pageContainer relative bg-cover bg-[url('./assets/crew/background-crew-desktop.jpg')] md:bg-[url('./assets/crew/background-crew-desktop.jpg')]">
       <motion.div
         initial={{ x: 250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

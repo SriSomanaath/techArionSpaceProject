@@ -3,7 +3,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div className="pageContainer bg-cover bg-[url('./assets/home/background-home-mobile.jpg')]  md:bg-[url('./assets/home/background-home-tablet.jpg')]  lg:bg-[url('./assets/home/background-home-desktop.jpg')]">
+    <div className="pageContainer bg-cover bg-[url('./assets/crew/background-crew-mobile.jpg')]  md:bg-[url('./assets/crew/background-crew-tablet.jpg')]">
       <motion.div
         initial={{ x: -250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

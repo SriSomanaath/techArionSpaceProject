@@ -12,7 +12,7 @@ const Technology = () => {
   const numberRefs = [useRef(null), useRef(null), useRef(null)];
 
   return (
-    <div className="text-white py-10 px-10 lg:px-0 lg:pl-20 flex flex-col gap-20 lg:gap-0 lg:flex-row lg:justify-between lg:items-center   h-auto md:h-screen w-screen  bg-black    bg-cover  lg:bg-[url('./assets/technology/background-technology-desktop.jpg')]">
+    <div className="text-white py-10 px-10 lg:px-0 lg:pl-20 flex flex-col gap-20 lg:gap-0 lg:flex-row lg:justify-between lg:items-center   h-auto md:h-screen w-screen  bg-black    bg-cover bg-[url('./assets/technology/background-technology-mobile.jpg')]  md:bg-[url('./assets/technology/background-technology-tablet.jpg')]">
       <motion.div
         initial={{ x: 250, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
