@@ -37,7 +37,7 @@ const Technology = () => {
         </div>
         <div className="techNumbersGrp gap-4 mt-10">
             <p
-              className="techNum techNumActive"
+              className="techNum"
               onClick={(e) => {
 
                 setTechHeading(0);
