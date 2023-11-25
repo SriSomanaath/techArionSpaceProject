@@ -40,16 +40,17 @@ function App() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="logoGrp ">
-          <img src={logo} alt="logo" className="lg:h-10 h-8 w-8" />
+        <div className="flex justify-between">
+          <img src={logo} alt="logo" className="lg:h-10 h-8" />
 
-          <img
+          <img className=" h-8 w-8 mt-10 ml-3"
             src={menuImg}
             alt="hamburger menu"
             className="md:hidden"
             ref={menuRef}
             onClick={toggleMenu}
           />
+
         </div>
 
         <nav className="hideNav" ref={navRef}>
