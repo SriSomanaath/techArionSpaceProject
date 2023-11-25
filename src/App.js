@@ -1,66 +1,76 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import {Navbar} from './components/NavBar';
-import Destination from './components/Destination';
-import Crew from './components/Crew';
-import Technology from './components/Technology';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+import Home from "./components/Home";
+import Destination from "./components/Destination";
+import Crew from "./components/Crew";
+import Technology from "./components/Technology";
+import logo from "./assets/shared/logo.svg";
 
 function App() {
 
   return (
-    <>
-    <div>
     <Router>
-    <nav className="bg-white p-4 border-slate-300">
-          <div className="container mx-auto flex justify-between items-center">
-            <div className="text-gray-800 font-medium">
-            </div>
-            <div className="text-gray-800 font-medium">
-              <Link to="/" className="ml-4">
-                Home
+    <div className="app">
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="flex flex-row justify-between">
+          <img src={logo} alt="logo" className="lg:h-10 h-8 w-8" />
+        </div>
+
+        <nav className="hideNav" >
+          <ul className="navList">
+            <li className="navText">
+              <Link to="/">
+               00 Home
               </Link>
-              <Link to="/destination" className="ml-4">
-              Destination
+            </li>
+
+            <li className="navText">
+              <Link to="/Destination">
+               01 Destination
               </Link>
-              <Link to="/crew" className="ml-4">
-              Crew
+            </li>
+
+            <li className="navText">
+              <Link to="/Crew">
+               02 Crew
               </Link>
-              <Link to="/technology" className="ml-4">
-              Technology
+            </li>
+
+            <li className="navText">
+              <Link to="/Technology">
+               03 Technology
               </Link>
-            </div>
-          </div>
+            </li>
+          </ul>
         </nav>
-        <div className="relative">
-          <Routes>
-          <Route path="/destination" element={<Destination />}/>
-          <Route path="/crew" element={<Crew />}/>
-          <Route path="/technology" element={<Technology />}/>
-          </Routes>
-        </div>
-      </Router>
-      <div className="text-center relative">
-      <div className="flex">
-        <img src="./Space.jpg" className="w-full blur-xs brightness-50" alt="Interface" />
-        <div className="absolute inset-y-0 right-0 flex items-center justify-start text-white p-4">
-          <div className="flex flex-col items-left">
-            <h2>SO, YOU WANT TO TRAVEL TO SPACE</h2>
-            <h1 className="text-5xl text-white  mb-4">SPACE</h1>
-            <h3 className="text-left text-2xl">Outer space refers to the areas between planets, solar systems, galaxies, galaxy clusters and galaxy superclusters.
-            <br />
-             There is little matter in outer space. It is a hard vacuum, without any air. This also makes it extremely cold.
-             <br />
-              There are some stray particles and radiation, though.
-              </h3>
-            <button className="text-black text-left bg-blue-100 rounded-lg p-2 m-5">
-              Contact us
-            </button>
-          </div>
-        </div>
-      </div>
+      </motion.header>
+
+      <div className="pages">
+        <Switch >
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route path="/Destination">
+            <Destination />
+          </Route>
+
+          <Route path="/Crew">
+            <Crew />
+          </Route>
+
+          <Route path="/Technology">
+            <Technology />
+          </Route>
+        </Switch>
       </div>
     </div>
-    </>
+    </Router>
   );
 }
 

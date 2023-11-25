@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.app {
+  @apply h-full bg-black;
+}
+
+header {
+  @apply flex flex-col md:flex-row md:justify-between md:items-center p-5 md:p-0 md:pl-10 text-white      relative lg:top-5 z-10;
+}
+
+nav {
+  @apply lg:w-1/2 py-5 lg:py-0  backdrop-blur-md px-4 bg-opacity-50 transition ease-in-out duration-300;
+}
+
+.hideNav {
+  @apply -translate-y-120 md:-translate-y-0 h-0 backdrop-blur;
+}
+.showNav {
+  @apply translate-y-6 md:translate-y-0;
+}
+
+.navList {
+  @apply flex flex-col items-center md:items-start md:flex-row md:justify-center gap-3 lg:gap-7;
+}
+
+.navText {
+  @apply font-bold md:font-medium text-2xl md:text-base cursor-pointer py-4 border-b-2 border-transparent hover:border-white transition ease-in-out duration-200;
+}
+
+.pages {
+  @apply absolute top-0 bg-black;
+}
+
+/* HOME */
+.pageContainer {
+  @apply text-white pb-10 pt-28 px-10 lg:pb-0 lg:pt-0 lg:px-20 flex flex-col lg:flex-row lg:justify-between lg:items-center gap-10 lg:gap-0  w-screen    md:h-screen bg-black;
+}
+
+.textSection,
+.imgSection {
+  @apply w-full lg:w-1/2;
+}
+
+.textSection {
+  @apply text-center lg:text-start;
+}
+
+.smallHeading,
+.bigHeading {
+  @apply uppercase font-bold;
+}
+
+.exploreBtn {
+  @apply bg-white  mx-auto block text-black font-bold text-xl px-20 py-24 rounded-full cursor-pointer;
+}
+
+/* DESTINATION PAGE */
+.imgHeading {
+  @apply flex flex-row gap-4 items-center font-semibold uppercase text-xl mb-10;
+}
+
+.planetImg {
+  @apply h-80 block mx-auto lg:mx-0;
+}
+
+.destinationSelection {
+  @apply flex flex-row justify-center lg:justify-start items-center gap-5;
+}
+
+.destination {
+  @apply py-3 border-b-2 border-transparent hover:border-white transition ease-in-out duration-200 cursor-pointer;
+}
+
+.destinationInfo {
+  @apply flex flex-row border-t justify-center lg:justify-start border-white mt-10 pt-5 gap-16;
+}
+
+/* CREW */
+.crewSelection {
+  @apply mx-auto md:mx-0 flex flex-row justify-center lg:justify-start gap-4 lg:absolute lg:bottom-0 py-10;
+}
+
+.circle {
+  @apply py-5 px-7 rounded-full border-white border cursor-pointer;
+}
+
+.crewImg {
+  @apply h-96  md:absolute md:bottom-20 lg:bottom-0 right-20 md:right-1/4 lg:right-20;
+}
+
+/* TECHNOLOGY */
+.techNumbersGrp {
+  @apply flex flex-row justify-center lg:justify-start gap-4;
+}
+
+.techNum {
+  @apply py-5 px-7 rounded-full border-white border cursor-pointer;
+}
+
+.techNumActive {
+  @apply bg-white text-black;
+}
+
+.techImg {
+  @apply h-96 block mx-auto lg:mx-0 lg:ml-auto;
+}
